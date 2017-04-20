@@ -1,0 +1,24 @@
+meyers conspect
+debug protosphere
+
+urefs and overloading - overload only if you need special processing for const LRefs: const T& param
+uref - RRef + type deduction + reference collapsing - how urefs become rrefs or lrefs
+std::forward - conditional cast to rvalue - if the passed param was an rvalue - serves for perfect forwarding, thus we don't need overload for any type (including type modifiers) of a function param
+
+backward compatibility with C++ 98 types which don't have overloads of ctor and assingment operator for rrefs - 
+due to rrefs' being able to be assigned to const lrefs, old types fall back to copying when trying to move on them:
+
+old_type v1;
+old_type v2 = std::move(v1); // copies instead of moving since there's no overload of = operator for rrefs
+
+std::move - unconditional cast to rvalue
+
+move ctors
+for move semantics to take action we need move ctor and move assignement operator
+
+noexcept specifier (which is an operator, taking and returning bool) - use it when you can gaurantee strong exception safety for given 
+function - allows compiler to produce more efficient code than w/o it
+
+
+
+

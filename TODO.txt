@@ -1,0 +1,362 @@
+
+- github - залить все критические документы, провести синхронизацию
+- what every programmer should know about memory
+- ассемблер
+- DirectX + Protosphere
+- лекции по STL
+- лекции по алгоритмам и СД
+- лекции по шаблонам проектирования
+- лекции по Concurrency
+- English - Lingvo tutor - купить подписку на Lingua Leo
+- покупка игр на стиме (Half-Life, Trine, Commandos ...)
+- mr. robot
+- кинотеатр
+- миссис Марпл
+
+Cpp Con Michael Flurry Ubisoft
+
+Технические основы C++ - полиморфизм, виртуальные таблицы
+Технопарк - C++ multiple inheritance, Java, Алгоритмы и СД, Фронтедн (введение в Веб)
+Логика: математическая, формальная
+youtube - плейлисты
+
+английский - Lingvo tutor
+
+Stroustrup:
+
+The C++ Programming Language (4th Edition)
+Bjarne Stroustrup - Programming principles and practice using C++(2ed, 2014)
+Stroustrup B. - A Tour of C++ - 2013
+Страуструп Б. - Дизайн и эволюция C++ (2007)
+
+Meyers:
+Effective Modern C++ - 2014
+Effective STL - 2001
+Effective C++. 55 Specific Ways to Improve Your Programs and Designs (3rd ed., 2005)
+Наиболее эфективное использование C++. 35 новых рекомендаций - 2000
+
+назарьевская слобода под рязанью
+российское переселенческое движение гуськов андрей евгеньевич
+
+-----------------------------------------------------------
+
+fluid mechanics - книги
+Java books
+
+Pratap Naidu - плейлисты
+
+
+Отсортировать книги!!!
+Статья по динамике ткани
+Варп двигатель
+Game engine design
+
+Собрать все материалы по рендеру и др. из почты (в т.ч.: статья о физически реальном рендере - мэйл.ру, софтверный рендер, робототехника)
+https://www.youtube.com/watch?v=qYN6eduU06s&index=1&list=PLT9sERcrvGS4UT83V8vXkIB1wjLQcdWJY - список литературы о работе с памятью
+
+Multithreading
+Multithreaded game engine design
+MOOC - курс по овладению техниками нескольких языков программирования - Java, Python (посмотреть список рекомендуемых
+языков в Game engine design), data structures, algorithms, patterns
+
+
+
+
+
+1) Параллельное программирование - 4 часа
+2) Структуры данных - 2 часа
+3) Статья - 1 час
+4) Build process - 1 час
+5) Архитектура памяти ЭВМ
+6) Английский язык:
+
+    лингвалео - 1 час
+    чтение    - 1 час
+
+
+--------------------------------------
+
+Blur: 
+
+СДЕЛАНО !!!
+
+--------------------------------------
+
+Shadow mapping:
+
+Cascaded Shadow Maps. ShaderX5
+
+Part 4
+Blend shadow edges with linear filtering:
+// Blends the shadow area into the lit area.
+float3 light = lighting * (ambient + DplusS(N, L, NdotL, input.view));
+float3 shadow = (1.0f - lighting) * ambient;
+return float4(input.color * (light + shadow), 1.f);
+
+
+Как добиться того, чтобы размеры проекционного окна ИС были равны размерам depthmap?
+В этом случае будет соответ-ие один к одному точки сцены, преобразуемой к LS_WVP, и точки в depthmap, находящихся на одной
+проекционной прямой => не потребуется интерполяция рез-в shadow map теста.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+) nsight is not compatible with d3d debug runtime
+
+) реализовать связь коллекции имён внутри таких классов как Effects, ShaderSystem и т.д. с полем name внутри класса
+  представляющего элемент коллекции; реализовать через указатели (ырфкув_зек); цель: изменение имени в элементе
+  коллекции должно быть видно и классам-пользователям коллекции
+
+---------------
+5.9 Clipping (p. 172):
+
+Sutherland-Hodgeman  clipping  algorithm  [Sutherland74]
+[Blinn78]  describes  how  clipping can be done in 4D homogeneous space
+
+--------
+
+ShaderX5, p. 205 [Picco] - overview of culling mechanisms - отсечение по графу сцены
+
+-------
+
+
+MapSym utility to create a symbol file
+
+найти книгу с моделью Солнечной системы
+
+Вычислительная гидродинамика:
+
+проверить:
+
+J:\ Root\Library\Программирование и GAMEDEV\GAMEDEV\Development process\DirectX\БАЗА ЗНАНИЙ\ГРАФИКА\ФИЗИКА\Вода\Динамика жидких сред\Вычислительная гидродинамика
+
+нотабене
+
+все ли учебные материалы есть на диске?
+
+
+Ray tracing (видео лекции UCDavis) - скачать всё
+
+
+GAMMA
+
+Wave works Real-tme Beaufort-scale ocean simulation NV Titan
+
+
+--------------------------------------------------
+
+VS 2013 Ultimate - BWG7X-J98B3-W34RT-33B3R-JVYW9
+
+Линский:
+
+Основы C++, второй семестр, лекция 4 - vector, deque, list, string. Итераторы
+Основы C++, вт. с., л. 5 - STL. Ассоциативные контейнеры set, multiset, map, multimap. Функторы
+Основы C++, лекция 6 - Инкапсуляция. Конструктор копий. Оператор присваивания
+Основы C++, лекция 10 - Умные указателиОсновы C++
+Основы C++, лекция 12 - Полиморфизм и виртуальные функции. Статическое и динамическое связывание
+
+
+-----------------------------------------------
+Найти:
+
+Крис Касперски:
+Техника оптимизации программ. Эффективное использование памяти
+Крис Касперски - 12 книг и статей [1999-2004, PDF/DOC/TXT/CHM, RUS]
+Компьютерные вирусы изнутри и снаружи
+Архитектура x86-64 под скальпелем ассемблерщика
+
+Обновить:
+
+J:\ Root\Library\Программирование и GAMEDEV\Программирование\C, C++\C++\УПРАВЛЕНИЕ ПАМЯТЬЮ\ВЫРАВНИВАНИЕ
+переименовать lib. internals, optimization
+
+-------------------------------------------------------
+фон Нейман - избранные труды, и.т. по функциональному анализу
+отсортировать книги
+
+C++ - лекция Линского по библиотекам
+
+как настроить Offline Explorer Enterprise чтобы всё работало как мне нужно
+
+скачать сайты:
+http://www.devx.com/cplus/archives/
+http://www.memorymanagement.org
+
+------------------------------------------
+
+D:\книги\теория алгоритмов\С++ for mathematicians - GCD: 31 (greatest common divisor), 235 (polynomials); 258 - Working in binary - includes
+section on bit operations (259); 289 - strings, i/o, visualization
+
+Фундаментальные Алгоритмы На C++ (Р.Седжвик, 2001) - много по рекурсии - НОД (раздел Деревья, с. 218)
+
+------------------------------------------
+СЕЙЧАС:
+
+
+New Features for Direct3D 11:
+
+Once your code is updated to use the Direct3D 11 API, there are numerous new features to consider.
+Multithreaded rendering through command lists and multiple contexts
+Implementing advanced algorithms using Compute Shader (using 4.0, 4.1, or 5.0 shader profiles)
+New 11 class hardware features:
+HLSL Shader Model 5.0
+Dynamic Shader Linkage
+Tessellation through Hull and Domain shaders
+New block compression formats: BC6H for HDR images, BC7 for higher-fidelity standard images
+Utilizing 10level9 technology for rendering on many Shader Model 2.0 and Shader Model 3.0 devices through the DIrect3D 11 API for lower-end video hardware support on Windows Vista and Windows 7.
+Leveraging the WARP software rendering device.
+
+(см. ...\Migration to Direct3D 11\Direct3D 11 Features)
+
+D3DCompileFromFile function: 
+
+pEntrypoint [in]
+A pointer to a constant null-terminated string that contains the name of the shader entry point function where shader execution begins. When you compile an effect, D3DCompileFromFile ignores pEntrypoint; we recommend that you set pEntrypoint to NULL because it is good programming practice to set a pointer parameter to NULL if the called function will not use it.
+
+Flags1, Flags2 - affect the compile target and whether a shader can run on legacy hardware (D3DCOMPILE Constants)
+
+битовые операции (C++ For Mathematicians (Edward Scheinerman, 2006), 
+
+устройство процессора (Таненбаум, видеоклип)
+
+how gpus work
+
+GPU gems (3 - физическое моделирование)
+
+Shaders X3 - parallax mapping
+
+двоичные деревья (Дональд Кнут - Искусство программирования, A laboratory course in C++ Data Structures (J.Roberge, S.Brandle, D.Whittington, 2003), Самобалансирующиеся деревья поиска (Алексей Владыкин - СПбГУ ИТМО, 2010), C++ Мастер-Класс. 85 Нетривиальных проектов и решений задач (Мозговой М.В., 2007), 2 видеоклипа, Сортировка и поиск - Рецептурный справочник (Томас Ниман, 1998), C - C++ Архив Программ (А.Фридман, Г. Шилдт и др., 2001), Структуры данных - примеры задач (КИТ КГУ), Матьяш В.А., Путилов В.А., Фильчаков В.В. , Щёкин С.В. - Структуры и алгоритмы обработки данных, Ахо Альфред В., Хопкрофт Джон Ульман, Джеффри, Д. - Структуры данных и алгоритмы - 2000, Randomized SearchTrees (R.Seidel, C.R. Aragon), Фундаментальные Алгоритмы На C++ (Р.Седжвик, 2001) )
+
+Модель памяти (из C++ за 21 день)
+
+What every programmer should know about memory (Ulrich Drepper, 21.9.2007)
+
+Математика:
+
+Штанюк А.А. - Лекции по математической логике и теории алгоритмов - 2006
+
+Рубанцев В. - Занимательные уроки с компьютером, или Small Basic для начинающих - 2012
+
+Верещагин Н.К., Шень А. - Лекции по математической логике и теории алгоритмов (теория множеств, логика и исчисление высказываний, языки первого порядка, теории и модели, исчисление предикатов, вычислимость, разрешимость, нумерации и операции, машины Тьюринга, универсальные функции, программа, печатающая свой текст и др.)
+
+D:\книги\теория алгоритмов\С++ for mathematicians - GCD: 31 (greatest common divisor), 235 (polynomials)
+Фундаментальные Алгоритмы На C++ (Р.Седжвик, 2001) - много по рекурсии - НОД (раздел Деревья, с. 218)
+
+------------------------------------------
+
+------------------------------------------
+
+поиск по "распределители памяти в C++"
+
+
+Virtual Addressing 101 пройти по ссылкам
+
+memory pools, менеджер памяти - memory manager (Алёна C++, коментарии), a garbage collector, smart_pointer [std::shared_ptr<>] (Линский)
+
+B.Stroustrup - C++ FAQ
+
+работа с файлами
+
+move semantics, rvalue, perfect forwarding
+
+Modern C++ (C++11) - containers - for_each [&] ? , Lambda Expressions in C++
+
+multithreading - atomic (lock-free) vs volatile
+
+std::shared_ptr - что такое умный указатель (Линский), Game programming gems 3 - p. 46 - Handle based smart pointers
+
+
+
+Game programming gems (3) - просмотреть секцию General programming
+
+
+What every programmer should know about memory (Ulrich Drepper, 21.9.2007)
+Дональд Кнут - оригинал и сверяться по нескольким Русским переводам
+A laboratory course in C++ Data Structures (J.Roberge, S.Brandle, D.Whittington, 2003)
+
+
+
+КРИ
+
+
+google placement new
+B.Stroustrup - placement delete
+
+Пишем:
+
+Memory Scanner using C# - CodeProject
+
+Alignment?
+std::shared_ptr - Wraps a reference-counted smart pointer around a dynamically allocated object
+
+template<class Other> void std::shared_ptr::reset(Other *ptr) - Replace owned resource
+
+std::forward
+
+std::atomic - (header <atomic>) - Defines classes and template classes to use to create types that support atomic operations. An atomic operation has two key properties that help you use multiple threads to correctly manipulate an object without using mutex locks. The template class atomic<Ty> stores an object of its argument type Ty and provides atomic access to that stored value. You can instantiate it by using any type that can be copied by using memcpy and tested for equality by using memcmp. In particular, you can use it with user-defined types that meet these requirements and, in many cases, with floating-point types.
+
+The template also has a set of specializations for integral types and a partial specialization for pointers. These specializations provide additional operations that are not available through the primary template.
+
+The atomic<Ty *> partial specializations apply to all pointer types. They provide methods for pointer arithmetic.
+
+The atomic<integral> specializations apply to all integral types. They provide additional operations that are not available through the primary template.
+
+
+Аллокатор и пул:
+
+- как работать с пулом: через передачу указателя на него в параметре шаблона или посредством реализации аллокатора с пулом в качестве данных класса
+- возможность задать размер пула и выравние единичного выделяемого блока при создании аллокатора
+- должен основываться на принципе произвольного доступа, т.к. стековый подход делает невозможным использование контейнеров STL (могут удалять/вставлять элементы в произвольном порядке)
+- выделения в пуле - последовательные, 
+
+
+Посмотреть:
+
+битовые операции
+smart pointer (Линский, Game programming gems - p. 46)
+
+
+Пишем аллокатор:
+
+customallocators.ppt (прочитал) - коротко изложенные основные сведения о написании пользовательских аллокаторов\
+Custom C++ allocators suitable for video games
+Game programming gems 3 - Custom STL allocators - p.51
+
+
+in-place allocator - через один из конструкторов аллокатора передаётся указатель на зарезервированную память (это может быть пул памяти) [и размер этого участка] - customallocators.ppt/стр. 35-39
+in-place allocator на базе массива (char и т.д.) - Страуструп, википедия - placement new, конспект по C++
+
+
+
+
+Allocators - sgi
+C&C++ Простой, но полезный аллокатор памяти
+Mallocator - VC++ team blog
+Custom Memory Allocation - 2002
+
+
+Пишем пул памяти:
+
+Programming with Memory Pools
+Very efficient replacement for std allocator - pool based allocator (идеи: как организовать иерархию классов для создания п.п.)
+Is there a way to force new to allocate memory from a specific memory area? (идеи: перегрузка операторов new/delete)
+Start Pre-allocating And Stop Worrying  (идеи: схема последовательного аллокатора, принцип индекса)
+
+The Memory Management Reference  Beginner's Guide  Allocation
+Buddy memory allocation - Wikipedia, the free encyclopedia
+Circular buffer - Wikipedia, the free encyclopedia
+	
+
+
+sequential allocators ?
+
+frame-to-frame heap ?
+
+
+
+Free list - Wikipedia, the free encyclopedia
+Memory pool - Wikipedia, the free encyclopedia
+Region-based memory management - Wikipedia, the free encyclopedia
+Stack-based memory allocation - Wikipedia, the free encyclopedia
+
+
