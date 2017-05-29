@@ -1,7 +1,17 @@
 
+Coplien J. Multi-paradigm  design  for C++ 1998 (ссылка на с. 127 Design patterns explained)
+
+нужно учитывать, что я не использую DSV
+
+1) Deferred shading
+2) Создать сцену со множеством ИС и геометрии (возможно, подгрузка из 3DS)
+3) Normal mapping
+
 1) конспект по кватернионам
 
-Deferred shading
+
+
+В Physically based rendering глава по Bounding volume hierarchies (BVH), kd-деревья
 
 Загрузка моделей из 3DS
 
