@@ -1,5 +1,12 @@
 
+
+Gamma, E., Helm, R., Johnson, R., Vlissides, J., Design Patterns: Elements of Reusable Object-Oriented Software, Boston.: Addison-Wesley, 1995
+
 Coplien J. Multi-paradigm  design  for C++ 1998 (ссылка на с. 127 Design patterns explained)
+
+Beck K. Extreme programming explained embrace change (2000)
+
+Fowler M. Refactoring improving the design of the existing code
 
 нужно учитывать, что я не использую DSV
 
