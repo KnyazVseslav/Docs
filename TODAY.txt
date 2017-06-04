@@ -1,5 +1,4 @@
 
-
 Gamma, E., Helm, R., Johnson, R., Vlissides, J., Design Patterns: Elements of Reusable Object-Oriented Software, Boston.: Addison-Wesley, 1995
 
 Coplien J. Multi-paradigm  design  for C++ 1998 (ссылка на с. 127 Design patterns explained)
@@ -10,7 +9,7 @@ Fowler M. Refactoring improving the design of the existing code
 
 нужно учитывать, что я не использую DSV
 
-1) Deferred shading
+2) реализовать shadow mapping в отложенном освещении
 2) Создать сцену со множеством ИС и геометрии (возможно, подгрузка из 3DS)
 3) Normal mapping
 
