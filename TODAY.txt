@@ -1,101 +1,430 @@
+﻿
+GIT:
+undoing mistakes
+tags and releases
+
+
+
+
+VISUAL STUDIO:
+C++ Debugging and Diagnostics https://devblogs.microsoft.com/cppblog/c-debugging-and-diagnostics/
+Visual Studio memory profiling tool for finding memory leaks
+Create custom views of C++ objects in the debugger  https://docs.microsoft.com/en-us/visualstudio/debugger/create-custom-views-of-native-objects?view=vs-2019
+C++ Edit and Continue in Visual Studio  https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015/
+VS command window ??
+
+инструментарий, профилирование и оптимизация (статья по рендеру; какие программы), cmake, mingw, gcc, git    Visual Studio memory profiling tool for finding memory leaks
+
+
+Мейл.Ру Алгоритмы и структуры данных  https://www.youtube.com/playlist?list=PLrCZzMib1e9rvDqeX2jRXrEWoTqUxrqUA
+
+C++ coroutines
+
+
+PIPELINE STALLS  DATA LOCALITY (game engine architecture, game programming patterns)
+CACHES  VIRTUAL MEMORY (чтение, лекции)  Luis Ceze playlist, game engine architecture  
+ЗАКОН АМДАЛА
+
+
+
+-------------------------
+Конспект:
+
+
+Three Optimization Tips for C++” for more information—it’s available here: http://www.slideshare.net/andreialexandrescu1/
+three-optimization-tips-for-c-15708507
+
+double-checked-locking as call_once, Preemption
+
+Hash tables - хэш-функция: деление по модулю на простое число  https://stackoverflow.com/questions/1145217/why-should-hash-functions-use-a-prime-number-modulus
+List - отличия intrusive и extrusive реализации списка
+
+Аллокаторы:
+
+Stack allocator - избавляет от фрагментации (аллокация блоков различной длины)
+
+--
+Double-ended stack allocator (аллоцирует в двух направлениях):
+Steve Ranck, Hydro Thunder’s lead engineer   Game Programming Gems, Section 1.9
+
+In Midway’s Hydro Thunder arcade game, all memory allocations are made
+from a single large block of memory managed by a double-ended stack allocator. The bottom stack is used for loading and unloading levels (race tracks),
+while the top stack is used for temporary memory blocks that are allocated and
+freed every frame. 
+--
+
+Memory pool - для однотипных элементов одинакового размера, хорошо подходит для хранения prev/next указателей экструзивных списков
+
+http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory  Christian Gyrling on allocators
+
+Single/Double frame allocators 248
+aligned allocations 244 sample code
+
+if a game engine relocates allocated data blocks at runtime to
+eliminate memory fragmentation (see Section 6.2.2.2), simple pointers cannot
+be used. We either need to use a type of object reference that is robust to memory relocation, or we need to manually fix up any pointers into every relocated
+memory block at the time it is moved.
+
+
+
+strings: string hashing and storing in hash tables for fast lookup, utf 8 16 32 ansi char wchar_t unicode under windows / consoles
+
+vtables
+
+executable image memory segments
+
+stack memory 
+
+Архитектура консолей (Game engine architecture 1st ed.)
+
+
+Exceptions:
+
+Clearly there are some pretty strong arguments for turning off exception
+handling in your game engine altogether. This is the approach employed at
+Naughty Dog and also on most of the projects I’ve worked on at Electronic
+Arts and Midway. That said, your mileage may vary! There is no perfect tool
+and no one right way to do anything. When used judiciously, exceptions can
+make your code easier to write and work with. Just be careful out there.
+There are many interesting articles on this topic on the web. Here’s one
+good thread that covers most of the key issues on both sides of the debate:
+http://www.joelonsoftware.com/items/2003/10/13.html
+• http://www.nedbatchelder.com/text/exceptions-vs-status.html
+• http://www.joelonsoftware.com/items/2003/10/15.html
+
+Steve Maguire provides an in-depth discussion of assertions in his must-read
+book, Writing Solid Code [30]
+
+-------------------------
+Чтение:
+
+Jason Gregory - Game Engine Architecture (2nd edition) - 2014
+Прочитать в 3ем издании Game Engine Architecture:
+обновить знания по архитектурам процессоров (в 3ем изд. больше информации)
+Multiprocessor game loops
+Rendering engine
+3D Math for games: comparison of rotational representations (p. 209 во 2м изд.)
+
+
+C++ guidelines
+
+Game coding complete
+
+Programming a multiplayer FPS in DirectX
+
+Computer architecture (Schaum's outlines)
+
+Game physics engine development
+
+C++ concurrency in action
+
+Write great code
+
+Effective STL
+
+Effective C++
+
+Herb Sutter
+
+
+-------------------------
+Topics:
+
+Floating-point numbers IEEE-754
+
+Пересмотреть всё по:
+1) data-oriented design
+
+ (CppCon 2014: Mike Acton "Data-Oriented Design and C++" https://www.youtube.com/watch?v=rX0ItVEVjHc, CppCon 2016: Chandler Carruth “High Performance Code 201: Hybrid Data Structures" https://www.youtube.com/watch?v=vElZc6zSIXM, CppCon 2014: Chandler Carruth "Efficiency with Algorithms, Performance with Data Structures" https://www.youtube.com/watch?v=fHNmRkzxHWs, Data-Oriented Demo: SOA, composition https://www.youtube.com/watch?v=ZHqFrNyLlpA)
+
+2) Modern C++ features (найти все просмотренные и сохранить в базе знаний, сделать резервную копию)
+
+Easing into Modern C++ (7 Features of C++ You Can Adopt Today) https://www.youtube.com/watch?v=8wnj6M-jj9c
+How to Adopt Modern C++17 into Your C++ Code : Build 2018  https://www.youtube.com/watch?v=UsrHQAzSXkA
+C++Now 2018: Michael Caisse “Modern C++ in Embedded Systems”  https://www.youtube.com/watch?v=c9Xt6Me3mJ4
+A Tour of Modern C++ https://www.youtube.com/watch?v=iWvcoIKSaoc
+C++17 - The Best Features - Nicolai Josuttis [ACCU 2018] https://www.youtube.com/watch?v=e2ZQyYr0Oi0
+
+
+3) Алгоритмы и структуры данных: технострим
+
+Fibers
+Fiber scheduler
+Spin locks
+
+Event system
+
+4) Lavavey stl, core c++, GN on parallel stl
+
+Multithreading:
+	- semaphor
+	- написать свой lightweight mutex/semaphor
+	- Game engine subsystems
+	- Render engine (deferred contexts)
+
+Rendering optimizations (Habr)
+
+Биты, байты (дочитать)
+
+Frame graph
+
+Occlusion culling
+Frustum cullling
+
+Scene graph
+Octree, Quadtree, BSP
+
+Memory:
+
+https://lwn.net/Articles/250967/ What every programmer should know about memory
+https://stackoverflow.com/questions/227897/how-to-allocate-aligned-memory-only-using-the-standard-library?noredirect=1&lq=1
+https://www.programmerinterview.com/index.php/operating-systems/how-virtual-memory-works/
+
+
+-------------------------
+Books:
+
+Data oriented design
+Machine architecture
+Game design patterns
+Meyers: STL, C++
+
+
+-------------------------
+Паттерны:
+Visitor
+MVC
+Composite
+Builder
+Dependency injection
+
+-------------------------
+Строки:
+
+https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+https://ssl.icu-project.org/docs/papers/unicode_wchar_t.html
+
+-------------------------
+Jason Gregory - Game Engine Architecture (2nd edition) - 2014:
+
+Fibers, fiber-based job scheduling system, spin locks:
+с. 260 on the PS4, Naughty Dog uses lightweight “spin
+lock” mutexes for the majority of our concurrent data structures, because they work well with our fiber-based job scheduling system.
+
+
+Handles:
+с. 263
+Bear in mind that smart pointers are complex beasts,
+and they can be performance hogs. Handles are usually preferable; see
+Section 15.5 for details.
+
+if a game engine relocates allocated data blocks at runtime to
+eliminate memory fragmentation (see Section 6.2.2.2), simple pointers cannot
+be used. We either need to use a type of object reference that is robust to memory relocation, or we need to manually fix up any pointers into every relocated
+memory block at the time it is moved.
+
+
+MT architecture on fibers + handles instead of smart ptrs
+-------------------------
+Endian swapping:
+
+You can reinterpret floats as integers by using C++’s reinterpret_cast
+operator on a pointer to the float, and then dereferencing the type-cast pointer;
+this is known as type punning. But punning can lead to optimization bugs
+when strict aliasing is enabled. (See http://www.cocoawithlove.com/2008/
+04/using-pointers-to-recast-in-c-is-bad.html for an excellent description of
+this problem.)
+http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory
+
+-------------------------
+
+КУРСЫ:
+
+Design Patterns
+https://ru.coursera.org/learn/design-patterns
+
+
+Data Structures and Design Patterns for Game Developers
+https://ru.coursera.org/learn/data-structures-design-patterns
+
+-------------------------
+
+дневник Достоевского
+этнография энциклопедии
+Аксаков
+Ильин
+Снычёв
+Русские Народные сказки
+
+Конан-Дойл
+Старшая/Младшая Эдда
+Понедельник начинается в субботу
+phys.org
+Паттерны
+Effective modern C++ & конспект
+FrameGraph
+Thread pool повторить
+Game engine architecture
+
+
+
+
+ocp - modularity (adding new variations is adding new modules instead of changing exisiting classes)
+dependency inv pr - complexification
+design by context - bridge pattern
+
+
+18, 40, 34, 49
+
+
+- надо добиться низкой плотности D выделений памяти и высокой локальности L доступа к памяти
+
+плотность выделений памяти - это отношение операций выделения/освобождения памяти к общему количеству операций:
+
+D = allocDeallocOpsNum/N
+
+напр., количество выделений памяти при добавлении элементов в вектор: допустим, мы делаем 2 * 10^9 push_back'ов, при этом количество выделений памяти будет равно 30 = log2(2*10^9);
+в данном случае, плотность будет маленькой, близкой к нулю, что есть хорошо, т.к. на 2 млрд. push_back'ов мы получили всего лишь 30 выделений памяти
+
+
+вариация выделенных размеров памяти V (variation of allocated sizes):
+
+V = numUniquAllocaSizes / numAllocOps
+
+0 : все выделенные размеры одинаковые
+1 : каждый выделенный размер разный
+
+
+локальность доступа к заданной области памяти пропорциональна количеству I операций доступа к памяти (вообще), обратнопропорциональна размеру M данной области, и количеству выходов T за эту область памяти:
+
+L = I / (M*T)
+
+I - num access instructions on subregion over dureation
+M - num bytes of memory in subregion
+T - num transitions out of subregion over duration
+
+0 :  область памяти большая или не часто запрашивается на доступ (subregion is large or not accessed repeatedly)
+1 :  область памяти большая и из неё часто делаются выборки (subregion is small and accesed repeatedly)
+
+- т.е. даже при низкой плостности выделений памяти (когда мы тратим мало времени на выделения памяти по отношение к общему количеству инструкций), плохая локальность доступа к этой памяти (т.е. более частые выходы за данную область памяти, чем попадания в неё) может снизить эффективность приложения (снизить его производительность)
+
+
+утилизация выделенной памяти U = maxMemoryInUse/totalMemoryAllocated
+
+конкуренция параллельных аллокаций C (contention of concurrent allocations):
+
+C = numConcurrentAllocations / numActiveThreads
+
+0 : если конкурентных аллокаций нет
+1 : если каждый поток пытается выделить/освободить память
+
+C сильно связан с плотностью аллокаций D
+
+
+
+
+2) написать heap
+3) реализовать heapsort
+
+Physically based rendering (PBR)
+Screen space reflections (SSR)
+Screen space ray traced reflections (SSRR)
+
+localhost:1000
+User: Engineer
+Workspace: Engineer
+Workspace root: E:\DEVELOPMENT\Projects
+Stream: mainline (//streamsDepot/mainline)
+Mappings: //streamsDepot/mainline/... //Engineer/...
+
+
+Maguire Writing solid code
+
+McConnell Code complete: a prctical handbook of software construction
 
 Gamma, E., Helm, R., Johnson, R., Vlissides, J., Design Patterns: Elements of Reusable Object-Oriented Software, Boston.: Addison-Wesley, 1995
 
-Coplien J. Multi-paradigm  design  for C++ 1998 (������ �� �. 127 Design patterns explained)
+Coplien J. Multi-paradigm  design  for C++ 1998 (ссылка на с. 127 Design patterns explained)
 
 Beck K. Extreme programming explained embrace change (2000)
 
 Fowler M. Refactoring improving the design of the existing code
 
-����� ���������, ��� � �� ��������� DSV
-
-2) ����������� shadow mapping � ���������� ���������
-2) ������� ����� �� ���������� �� � ��������� (��������, ��������� �� 3DS)
+2) Создать сцену со множеством ИС и геометрии (возможно, подгрузка из 3DS)
 3) Normal mapping
 
-1) �������� �� ������������
 
 
 
-� Physically based rendering ����� �� Bounding volume hierarchies (BVH), kd-�������
+В Physically based rendering глава по Bounding volume hierarchies (BVH), kd-деревья
 
-�������� ������� �� 3DS
+Загрузка моделей из 3DS
 
 SSAO
 
-Octree ������������� � ����� ����������� �������� ����������� ���� � ���������� �������
+Octree применительно к более эффективной проверке пересечения луча с полигонами объекта
 
 
 
-����������� - ��� ������
-��� �������/��������
+Кватернионы - две лекции
+ДДП вставка/удаление
 
-2) ���������:
+2) конспекты:
 
-�������� �������� �� ������������� �������� ��������������: dx
-������ ��������� � HLSL
+дописать конспект по интерпретации видового преобразования: dx
+модель освещения в HLSL
 
 
-����������� ������� ������
-�����
-����� ������
+Циолковский Эфирный остров
+Тесла
+Новая физика
 
-�������� � ����� ���������� (�� ������ ��������������� � ��.)
-������������� �� ����� � �������� ������ �� ��� �� ���������� � ����� �� ����� ������
+Докачать в папке МАТЕМАТИКА (по теории относительности и др.)
+сгруппировать по темам и добавить ссылки на СТО из астрономии и курса по общей физике
 
-��������
-���������
-�����������
-��������� �� ������
-��������
-�������
-����������
-�����������
+Пуанкаре
+Перельман
+Лобачевский
+программы по физике
+Гильберт
+Стеклов
+Холмогоров
 
 I. Camera
-3) ����������� ������ �� Ch. 15 Building a first person camera and dynamic indexing
-5) ����������� ���������� ��������� �� ��� (frustum culling): Ch. 16 Instancing and
+3) Реализовать камеру по Ch. 15 Building a first person camera and dynamic indexing
+5) Реализовать отбраковку геометрии по УПВ (frustum culling): Ch. 16 Instancing and
    frustum culling
-8) ����������� ambient occlusion ������������ ����: Ch. 21 Ambient occlusion
+8) Реализовать ambient occlusion трассировкой луча: Ch. 21 Ambient occlusion
 
 
 1) binary search tree
 
-����������� - ������ m3rm, ���������
+Достоевский - статья m3rm, Подросток
 
 
 Multithreading
-��������� ������ � ��������� - ������� ������
+Стурктуры данных и алгоритмы - русская лекция
 
 
 
 math book
-������� ����� �� vk
-���������� �� ������
-���������� ��� Android
-�������������
-
-����������
-�����������
-�����
-
-
-1) �������� ����������, ��������� �� ����� ���
-
-���������
-
-������������� ����
-
-�����, �����������, ������� ������� II, ������, ����������, �������, ��������
-��������
-������� ������. XX ��� 1914 + ���������
-
-��������� (�������)
-
-C++ (�������)
-������� �������������� (�������)
-��������� (�������)
+скачать книги из vk
+Сортировка на дисках
+Приложение под Android
+Синхронизатор
 
 
 
-���������, ����� �� ���� ������� ���� ��������� ����� � �������, �� ���� ASSIGNMENT ����� ���� ��������� ��������� ������
+ИЛЬИН, ДОСТОЕВСКИЙ, ДНЕВНИК НИКОЛАЯ II, ВАНДАМ, ОЛЬДЕНБУРГ, ДЕНИКИН, ВРАНГЕЛЬ
+МИХАЛКОВ
+История России. XX век 1914 + КОНСПЕКСТ
+
+АЛГОРИТМЫ (НЕМНОГО)
+
+C++ (НЕМНОГО)
+ШАБЛОНЫ ПРОЕКТИРОВАНИЯ (НЕМНОГО)
+АССЕМБЛЕР (НЕМНОГО)
+
+
+
+ПРОВЕРИТЬ, ЧТОБЫ КО ВСЕМ ЗАДАЧАМ БЫЛИ ТЕКСТОВЫЕ ФЫЙЛЫ С ДАННЫМИ, НА ОДИН ASSIGNMENT МОЖЕТ БЫТЬ НЕСКОЛЬКО ТЕКСТОВЫХ ФАЙЛОВ

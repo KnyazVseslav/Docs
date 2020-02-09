@@ -1,3 +1,30 @@
+рендер в юнити - использ. occlusion culling (https://www.youtube.com/watch?v=ZdwreBcDyzY  Escape From Tarkov технический обзор. Как работает графика? Что не так с неткодом?)
+непрямое освещение
+глянуть ролик белорусского айтишника про освещение в юнити
+
+
+ПРОЙТИ КУРСЫ:
+
+Design Patterns
+https://ru.coursera.org/learn/design-patterns
+
+
+Data Structures and Design Patterns for Game Developers
+https://ru.coursera.org/learn/data-structures-design-patterns
+
+
+Reliable Cloud Infrastructure: Design and Process
+https://ru.coursera.org/learn/cloud-infrastructure-design-process
+
+
+ООП и паттерны проектирования в Python (Мейл Ру)
+https://ru.coursera.org/learn/oop-patterns-python
+
+
+Специализация Программирование на Python
+https://ru.coursera.org/specializations/programming-in-python#courses
+
+--------------------------------------------------------------------------------
 
 - github - залить все критические документы, провести синхронизацию
 - what every programmer should know about memory
@@ -8,12 +35,8 @@
 - лекции по шаблонам проектирования
 - лекции по Concurrency
 - English - Lingvo tutor - купить подписку на Lingua Leo
-- покупка игр на стиме (Half-Life, Trine, Commandos ...)
-- mr. robot
-- кинотеатр
-- миссис Марпл
 
-Cpp Con Michael Flurry Ubisoft
+Cpp Con Michael Flurry
 
 Технические основы C++ - полиморфизм, виртуальные таблицы
 Технопарк - C++ multiple inheritance, Java, Алгоритмы и СД, Фронтедн (введение в Веб)
@@ -22,11 +45,16 @@ youtube - плейлисты
 
 английский - Lingvo tutor
 
+Аллокаторы:
+
+Effective STL, 2001, Item 10: code at Josuttis' sample allocator web page, Austern's article, "What Are Allocators Good For?"
+
+
+
 Stroustrup:
 
 The C++ Programming Language (4th Edition)
 Bjarne Stroustrup - Programming principles and practice using C++(2ed, 2014)
-Stroustrup B. - A Tour of C++ - 2013
 Страуструп Б. - Дизайн и эволюция C++ (2007)
 
 Meyers:
@@ -34,6 +62,33 @@ Effective Modern C++ - 2014
 Effective STL - 2001
 Effective C++. 55 Specific Ways to Improve Your Programs and Designs (3rd ed., 2005)
 Наиболее эфективное использование C++. 35 новых рекомендаций - 2000
+
+Sutter "Optimizations that aren't in a multithreaded world" - статья о refrence-counted строках в конексте многопоточности
+
+
+Конспект по:
+
+Effective C++, 2000:
+18, 40, 34, 49
+
+Effective STL, 2001:
+
+10, 11, 
+
+
+
+Ссылки из Jason Gregory - Game Engine Architecture (2nd edition) - 2014:
+
+Follow C++ best practices. Books like the Effective C++ series by Scott Meyers [31,32], Meyers’ Effective STL [33] and Large-Scale C++ Software Design by John Lakos [27] provide excellent guidelines that will help keep you
+out of trouble.
+
+Make errors stick out. Joel Spolsky wrote an excellent article on coding
+conventions, which can be found at http://www.joelonsoftware.com/
+articles/Wrong.html. Joel suggests that the “cleanest” code is not necessarily code that looks neat and tidy on a superficial level, but rather the
+code that is written in a way that makes common programming errors
+easier to see. Joel’s articles are always fun and educational, and I highly
+recommend this one.
+
 
 назарьевская слобода под рязанью
 российское переселенческое движение гуськов андрей евгеньевич

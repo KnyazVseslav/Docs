@@ -1,0 +1,141 @@
+
+
+
+
+
+
+StringReversal, Insertion/Selection sort, other practical tasks  !!!!!!
+65318724
+
+удаление вставка элемента в ДДП
+инвалидация итераторов, как решается эта проблема
+
+DEFERRED RENDERING
+
+
+паттерны:   сравнение (Bridge vs. Strategy), SOLID, GRASP
+hash table   как задаётся хэш-функция (строки и др. типы данных)
+type casts
+
+
+алгоритм нахождения цикла в графе
+
+MULTITHREADING: async, packaged_task, future, promise -------------
+
+thread_local -------------
+
+что такое критическая секция, сравнение критической секции и мьютекса -------------
+
+
+QUADTREE (GAME PROGRAMMING PATTERNS)
+ФИЗИКА
+
+PATTERN ORIENTED PROGRAMMING: ИНКАПСУЛЯЦИЯ И ДР. КОНЦЕПТЫ ------------- 
+
+C++ FAQ
+Coursera: паттерны
+MFGD Optimizations
+Coding Math Episodes
+
+friend classes -------------
+
+два способа реализации списка
+
+compile time if -------------
+
+implement std::enable_if and std::is_integral -----------
+
+selection sort -----------
+
+template overload resolution -----------
+
+exception handling in constructors -----------
+
+
+inline variables  (C++17 feature) -----------
+weak_ptr  нужен для решения задачи разделяемого владения, но когда нужны циклические ссылки -----------
+частичная специализация шаблонов (что это такое, взять из статьи IBM) -----------
+почему нет частичной специализации шаблонных ф-ий -----------
+SFINAE -----------
+ODR-use -----------
+
+delete[] как устроен (есть в interview questions) реализовать кастомные new и delete операторы -----------
+endian swapping -----------
+type punning -----------
+casts -----------
+тайминги доступа к разным видам памяти -----------
+
+bit operations
+
+storage классы (automatic, dynamic storage duration, that is, objects whose lifetime is not limited by the scope in which they were created; static, extern, inline)
+
+std::move
+std::forward
+iterator implementation
+
+make_shared
+обзор STL контейнеров, какие структуры данных использованы для имплементации
+
+floating-point notation, two's complement
+
+
+
+
+
+Render:
+
+lighting
+deferred shading
+shadow mapping
+normal mapping
+
+
+
+
+добавить в конспект:
+
+основные возможности C++11-17
+
+
+anonymous namespaces
+inline namespaces
+
+thread_local 
+
+exception handling in constructors
+inline variables  (C++17 feature)
+weak_ptr  нужен для решения задачи разделяемого владения, но когда нужны циклические ссылки
+частичная специализация шаблонов (что это такое, взять из статьи IBM)
+почему нет частичной специализации шаблонных ф-ий
+SFINAE
+
+
+
+double-dispatch late-binding
+
+- fn template specialization can only be a full specialization; there's no partial fn template specialization; the effect of partial fn specialization can be achieved through fn overloading
+
+fn overload resolution:
+
+- сперва в определении кандидата участвуют только нешаблонные ф-ии,
+- потом - базовые шаблоны (т.е. неспециализированнные шаблонные ф-ии): выбирается та перегрузка, которая наиболее точно подходит для аргументов вызова ф-ии
+- специализации (полные; т.к. частичных для шаблонных ф-й не бывает) шаблонных ф-й изначально не участвуют в разрешении перегрузок (т.е. специализации не участвуют в разрешении перегрузок сами по себе на равне с базовыми шаблонами), и проверяются на соотв-ие, как уточнение наиболее подходящего базового шаблона; т.е. сперва определяется наиболее подходящий общий шаблон ф-ии, а затем, в случае, если есть ещё более подходящая его специализация, то она и выбирается
+- иначе, если бы специализации разных базовых шаблонных ф-ий сразу участвовали в разрешении перегрузок, то нелогичным образом менялся бы базовый шаблон, от которого данная специализация и получена
+
+- для эмуляции частичной специализации ф-ий можно использовать технику:
+template<class T> 
+struct FImpl;
+
+template<class T> 
+void f( T t ) { FImpl<T>::f( t ); } // users, don't touch this!
+
+template<class T> 
+struct FImpl 
+{ 
+  static void f( T t ); // users, go ahead and specialize this 
+};
+
+If you're writing a function template, prefer to write it as a single function template that should never be specialized or overloaded, and implement the function template entirely in terms of a class template. This is the proverbial level of indirection that steers you well clear of the limitations and dark corners of function templates. This way, programmers using your template will be able to partially specialize and explicitly specialize the class template to their heart's content without affecting the expected operation of the function template. This avoids both the limitation that function templates can't be partially specialized, and the sometimes surprising effect that function template specializations don't overload. Problem solved.
+
+
+
