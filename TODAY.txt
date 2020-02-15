@@ -58,7 +58,6 @@ Memory pool - для однотипных элементов одинаково�
 http://www.swedishcoding.com/2008/08/31/are-we-out-of-memory  Christian Gyrling on allocators
 
 Single/Double frame allocators 248
-aligned allocations 244 sample code
 
 if a game engine relocates allocated data blocks at runtime to
 eliminate memory fragmentation (see Section 6.2.2.2), simple pointers cannot
