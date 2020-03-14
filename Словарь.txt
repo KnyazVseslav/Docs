@@ -5,8 +5,11 @@
 
 
 
-
-
+slap smth into  шлёпнуть/кинуть/бросить/поместить чт-л в ... as the programmer cannot slap a game object into the watch window in the debugger in order to inspect all of its properties at once
+cobble together  сшить/объединять   It can be hard to implement a desired large-scale behavior merely by cobbling together the finegrained behaviors of a group of property objects
+cobble чинить вымащивать латать   мостить булыжником  булыжник  крупный уголь
+concession уступка  a thing that is granted, especially in response to demands; a thing conceded
+concede  уступать
 first up  сначала   прежде всего  сперва
 onus  ответственность бремя долг
 wink  подмигивать
